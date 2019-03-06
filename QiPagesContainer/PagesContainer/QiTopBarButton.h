@@ -14,11 +14,5 @@
 @property (nonatomic, strong) UIColor *colorSelected;
 @property (nonatomic, copy)  NSString* imgIndicatorName;
 
-// 角标 (左上角位置 文字为白色背景为红色)
-- (void)setBadgeStr:(NSString *)badgeStr;
-
-// 隐藏角标
-- (void)hideBadge;
-
 @end
 

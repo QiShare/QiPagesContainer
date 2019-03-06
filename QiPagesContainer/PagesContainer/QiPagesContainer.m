@@ -212,17 +212,6 @@
     }
 }
 
-#pragma mark - set badge
-- (void)setBadgeText:(NSString *)badgeText atIndex:(NSInteger)index {
-    
-    [_topBar setBadgeText:badgeText atIndex:index];
-}
-
-- (void)hideBadgeAtIndex:(NSInteger)index {
-    
-    [_topBar hideBadgeAtIndex:index];
-}
-
 #pragma mark - 设置按钮选中和未选中的颜色
 - (void)setTextColor:(UIColor *)normalColor andSelectedColor:(UIColor *)selectedColor {
     
@@ -245,12 +234,6 @@
 - (void)setCursorHeight:(CGFloat)height {
     
     [_topBar setCursorHeight:height];
-}
-
-#pragma mark 设置指示器 默认在右侧 -
-/** 设置其中一项的指示图片 文字右侧 */
-- (void)imageIndicatorNamed:(NSString*)imgName atIndex:(NSInteger)index{
-    [_topBar setImageIndicatorNamed:imgName atIndex:index];
 }
 
 #pragma mark - 获取顶部的tabBar 

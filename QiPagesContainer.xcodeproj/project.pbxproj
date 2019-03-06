@@ -13,7 +13,6 @@
 		147E2C99222CD6AA0075A54D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147E2C97222CD6AA0075A54D /* LaunchScreen.storyboard */; };
 		147E2C9C222CD6AA0075A54D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 147E2C9B222CD6AA0075A54D /* main.m */; };
 		147E2CD0222CD7340075A54D /* QiAllowPanGestureScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 147E2CC6222CD7340075A54D /* QiAllowPanGestureScrollView.m */; };
-		147E2CD1222CD7340075A54D /* QiPageCommonHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 147E2CC9222CD7340075A54D /* QiPageCommonHeaderView.m */; };
 		147E2CD2222CD7340075A54D /* QiTopBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 147E2CCB222CD7340075A54D /* QiTopBarButton.m */; };
 		147E2CD3222CD7340075A54D /* QiPagesContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 147E2CCE222CD7340075A54D /* QiPagesContainer.m */; };
 		147E2CD4222CD7340075A54D /* QiPagesContainerTopBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 147E2CCF222CD7340075A54D /* QiPagesContainerTopBar.m */; };
@@ -32,11 +31,9 @@
 		147E2CC6222CD7340075A54D /* QiAllowPanGestureScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QiAllowPanGestureScrollView.m; sourceTree = "<group>"; };
 		147E2CC7222CD7340075A54D /* QiTopBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QiTopBarButton.h; sourceTree = "<group>"; };
 		147E2CC8222CD7340075A54D /* QiPagesContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QiPagesContainer.h; sourceTree = "<group>"; };
-		147E2CC9222CD7340075A54D /* QiPageCommonHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QiPageCommonHeaderView.m; sourceTree = "<group>"; };
 		147E2CCA222CD7340075A54D /* QiPagesContainerTopBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QiPagesContainerTopBar.h; sourceTree = "<group>"; };
 		147E2CCB222CD7340075A54D /* QiTopBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QiTopBarButton.m; sourceTree = "<group>"; };
 		147E2CCC222CD7340075A54D /* QiAllowPanGestureScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QiAllowPanGestureScrollView.h; sourceTree = "<group>"; };
-		147E2CCD222CD7340075A54D /* QiPageCommonHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QiPageCommonHeaderView.h; sourceTree = "<group>"; };
 		147E2CCE222CD7340075A54D /* QiPagesContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QiPagesContainer.m; sourceTree = "<group>"; };
 		147E2CCF222CD7340075A54D /* QiPagesContainerTopBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QiPagesContainerTopBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,8 +90,6 @@
 				147E2CCE222CD7340075A54D /* QiPagesContainer.m */,
 				147E2CCA222CD7340075A54D /* QiPagesContainerTopBar.h */,
 				147E2CCF222CD7340075A54D /* QiPagesContainerTopBar.m */,
-				147E2CCD222CD7340075A54D /* QiPageCommonHeaderView.h */,
-				147E2CC9222CD7340075A54D /* QiPageCommonHeaderView.m */,
 				147E2CCC222CD7340075A54D /* QiAllowPanGestureScrollView.h */,
 				147E2CC6222CD7340075A54D /* QiAllowPanGestureScrollView.m */,
 			);
@@ -173,7 +168,6 @@
 				147E2CD2222CD7340075A54D /* QiTopBarButton.m in Sources */,
 				147E2CD3222CD7340075A54D /* QiPagesContainer.m in Sources */,
 				147E2CD0222CD7340075A54D /* QiAllowPanGestureScrollView.m in Sources */,
-				147E2CD1222CD7340075A54D /* QiPageCommonHeaderView.m in Sources */,
 				147E2C91222CD69F0075A54D /* ViewController.m in Sources */,
 				147E2C9C222CD6AA0075A54D /* main.m in Sources */,
 				147E2C8E222CD69F0075A54D /* AppDelegate.m in Sources */,

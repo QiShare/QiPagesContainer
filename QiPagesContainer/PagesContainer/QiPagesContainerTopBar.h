@@ -12,7 +12,7 @@
 
 @interface QiPagesContainerTopBar : UIView
 
-@property (nonatomic, assign) id<QiPagesContainerTopBarDelegate> target;
+@property (nonatomic, weak) id<QiPagesContainerTopBarDelegate> target;
 
 // 设置相邻button之间的间距(两个button的title之间的距离）
 @property (nonatomic, assign) CGFloat buttonMargin;
@@ -35,26 +35,14 @@
 
 - (NSInteger)getSelectedIndex;
 
-- (void)setBadgeText:(NSString *)badgeText atIndex:(NSInteger)index;
-
-- (void)hideBadgeAtIndex:(NSInteger)index;
-
 // 设置滑块的颜色
 - (void)setCursorColor:(UIColor *)color;
 // 设置滑块长度
 - (void)setCursorWidth:(CGFloat)width;
 // 设置滑块长度
 - (void)setCursorHeight:(CGFloat)height;
-
 // 设置按钮选中和未选中的颜色
 - (void)setTextColor:(UIColor *)normalColor andSelectedColor:(UIColor *)selectedColor;
-
-// 获取文字右侧指示器图片名称
-- (NSString*)getImageIndicatorNameWithIndex:(NSInteger)index;
-// 设置按钮的指示标志
-- (void)setImageIndicatorNamed:(NSString*)imgName atIndex:(NSInteger)index;
-// 设置按钮的指示标志
-- (void)setImageIndicatorNamed:(NSString*)firstImgName,  ... NS_REQUIRES_NIL_TERMINATION;
 
 @end
 

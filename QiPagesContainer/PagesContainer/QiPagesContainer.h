@@ -13,7 +13,7 @@
 
 @interface QiPagesContainer : UIView
 
-@property (nonatomic, assign) id<QiPagesContainerDelegate>delegate;
+@property (nonatomic, weak) id<QiPagesContainerDelegate>delegate;
 
 /**
  设置相邻button之间的间距。间距是从该button的文字结束到下个button的文字开始之间的距离
@@ -67,21 +67,13 @@
 - (UIView *)getPageViewWithIndex:(NSInteger)index;
 
 /**
- 设置badge的内容
+ 获取顶部的tabBar
  */
-- (void)setBadgeText:(NSString *)badgeText atIndex:(NSInteger)index;
-/**
- 隐藏badge
- */
-- (void)hideBadgeAtIndex:(NSInteger)index;
-
-/** 设置其中一项的指示图片 文字右侧 */
-- (void)imageIndicatorNamed:(NSString*)imgName atIndex:(NSInteger)index;
-
-/** 获取顶部的tabBar */
 - (QiPagesContainerTopBar*)topBar;
 
-/** 设置按钮选中和未选中的颜色 */ 
+/**
+ 设置按钮选中和未选中的颜色
+ */ 
 - (void)setTextColor:(UIColor *)normalColor andSelectedColor:(UIColor *)selectedColor;
 
 // 设置滑块的颜色

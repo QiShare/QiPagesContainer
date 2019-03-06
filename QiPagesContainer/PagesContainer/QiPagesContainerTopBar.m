@@ -304,10 +304,10 @@
         CGFloat cursorWidth = _cursorWidth;
         if (_cursorWidth == 0) {
             cursorWidth = preBtn.titleLabel.frame.size.width + (indexOffset - preIndex) * (nextBtn.titleLabel.frame.size.width - preBtn.titleLabel.frame.size.width);
+            CGRect frame = _cursor.frame;
+            frame.size.width = cursorWidth;
+            _cursor.frame = frame;
         }
-        CGRect frame = _cursor.frame;
-        frame.size.width = cursorWidth;
-        _cursor.frame = frame;
         
         CGFloat cursorCenterX = preBtn.center.x + (indexOffset - preIndex) * (nextBtn.center.x - preBtn.center.x);
         _cursor.center = CGPointMake(cursorCenterX , _cursor.center.y);
@@ -323,65 +323,6 @@
         }
     }
     return nil;
-}
-
-- (void)setBadgeText:(NSString *)badgeText atIndex:(NSInteger)index {
-    
-    QiTopBarButton *button = [self getCustomButtonAtIndex:index];
-    [button setBadgeStr:badgeText];
-}
-
-- (void)hideBadgeAtIndex:(NSInteger)index {
-    
-    QiTopBarButton *button = [self getCustomButtonAtIndex:index];
-    [button hideBadge];
-}
-
-/** 设置按钮的指示标志 */
-- (void)setImageIndicatorNamed:(NSString*)imgName atIndex:(NSInteger)index {
-    
-    if(_arrayButtons == nil)
-        return;
-    QiTopBarButton *button = [self getCustomButtonAtIndex:index];
-    [button setImgIndicatorName:imgName];
-    return;
-}
-
-/** 获取文字右侧指示器图片名称 */
-- (NSString*)getImageIndicatorNameWithIndex:(NSInteger)index{
-    
-    if(_arrayButtons == nil||index>=_arrayButtons.count)
-        return nil;
-    QiTopBarButton *button = [self getCustomButtonAtIndex:index];
-    if(button!=nil)
-    {
-        return button.imgIndicatorName;
-    } else {
-        return nil;
-    }
-    
-}
-
-/** 设置按钮的指示标志 */
-- (void)setImageIndicatorNamed:(NSString*)firstImgName,  ... NS_REQUIRES_NIL_TERMINATION {
-    
-    NSString* imgName;
-    va_list argumentList;
-    
-    va_start(argumentList, firstImgName);
-    imgName = firstImgName;
-    
-    NSInteger index = 0;
-    while (imgName!=nil) {
-        QiTopBarButton *button = [self getCustomButtonAtIndex:index];
-        if(button != nil) {
-            [button setImgIndicatorName:imgName];
-        }
-        index++;
-        imgName = va_arg(argumentList, NSString*);
-    }
-    va_end(argumentList);
-    return;
 }
 
 - (void)setBackgroundImage:(UIImage *)image {
