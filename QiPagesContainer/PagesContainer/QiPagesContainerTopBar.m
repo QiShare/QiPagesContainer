@@ -31,34 +31,16 @@
 
 @implementation QiPagesContainerTopBar
 
-- (id)init {
-    
-    self = [super init];
-    if (self) {
-        [self setup];
-    }
-    return self;
-}
-
 - (id)initWithFrame:(CGRect)frame {
     
     self = [super initWithFrame:frame];
     if (self) {
-        [self setup];
+        [self setupViews];
     }
     return self;
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder {
-    
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        [self setup];
-    }
-    return self;
-}
-
-- (void)setup {
+- (void)setupViews {
     
     _buttonMargin = BUTTON_MARGIN_DEFAULT;
     _cursorHeight = CursorHeightDefault;
@@ -197,7 +179,6 @@
     return button;
 }
 
-/** 点击topbar的某一项 */
 - (void)buttonClicked:(id)sender {
     
     UIButton *button = (UIButton *)sender;
@@ -302,7 +283,7 @@
         UIButton *nextBtn = [_arrayButtons objectAtIndex:nextIndex];
         
         CGFloat cursorWidth = _cursorWidth;
-        if (_cursorWidth == 0) {
+        if (cursorWidth == 0) {
             cursorWidth = preBtn.titleLabel.frame.size.width + (indexOffset - preIndex) * (nextBtn.titleLabel.frame.size.width - preBtn.titleLabel.frame.size.width);
             CGRect frame = _cursor.frame;
             frame.size.width = cursorWidth;
