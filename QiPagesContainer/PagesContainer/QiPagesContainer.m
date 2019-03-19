@@ -49,8 +49,6 @@
     [_scrollView setAlwaysBounceVertical:NO];
     [_scrollView setBounces:NO];
     [self addSubview:self.scrollView];
-    
-    [self layoutSubviews];
 }
 
 - (void)layoutSubviews {
