@@ -94,7 +94,7 @@
 #pragma mark - update content
 - (void)setDefaultSelectedPageIndex:(NSInteger)index {
     
-    if (index >= 0 && index <= [_arrayViews count] && index != _currentPageIndex) {
+    if (index >= 0 && index < [_arrayViews count] && index != _currentPageIndex) {
         [_topBar setSelectedIndex:index];
         _currentPageIndex = index;
         
@@ -104,7 +104,7 @@
 
 - (void)setSelectedPageIndex:(NSInteger)index {
     
-    if (index >= 0 && index <= [_arrayViews count] && index != _currentPageIndex) {
+    if (index >= 0 && index < [_arrayViews count] && index != _currentPageIndex) {
         [_topBar setSelectedIndex:index];
         [self topBarSelectIndex:index];
     }

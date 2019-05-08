@@ -63,6 +63,10 @@
     _cursor.backgroundColor = [UIColor redColor];
     _cursor.layer.cornerRadius = _cursorHeight / 2.0;
     [_scrollView addSubview:_cursor];
+    
+    
+    [_scrollView.layer setBorderWidth:1.0];
+    [_scrollView.layer setBorderColor:[UIColor blueColor].CGColor];
 }
 
 - (void)layoutSubviews {
@@ -83,7 +87,7 @@
     
     // 按钮未排满整屏宽度时
     if (!_isButtonAlignmentLeft && contentWidth < size.width) {
-        CGFloat buttonWidth = floorf((size.width - MARGIN_HORI * 2) / [_arrayButtons count]);
+        CGFloat buttonWidth = floorf(size.width / _arrayButtons.count);
         for (UIButton *button in _arrayButtons) {
             CGRect frame = button.frame;
             frame.size.width = buttonWidth;
@@ -106,6 +110,10 @@
         if (button.selected) {
             selectedIndex = i;
         }
+        
+        [button.layer setBorderWidth:2.0];
+        [button.layer setBorderColor:[UIColor redColor].CGColor];
+        
     }
     
     // 设置分割线位置

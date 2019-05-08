@@ -278,7 +278,7 @@
     NSInteger preIndex = floorf(indexOffset);
     NSInteger nextIndex = ceilf(indexOffset);
     
-    if (preIndex >= 0 && nextIndex <= [_arrayButtons count]) {
+    if (preIndex >= 0 && nextIndex < [_arrayButtons count]) {
         UIButton *preBtn = [_arrayButtons objectAtIndex:preIndex];
         UIButton *nextBtn = [_arrayButtons objectAtIndex:nextIndex];
         

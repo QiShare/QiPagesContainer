@@ -61,7 +61,6 @@
     _topBar.frame = CGRectMake(0, 0, size.width, TOPBAR_HEIGHT);
     _scrollView.frame = CGRectMake(0, TOPBAR_HEIGHT, size.width, scrollViewHeight);
     
-    
     for (int i=0; i<[_viewArr count]; i++) {
         UIView *v = [_viewArr objectAtIndex:i];
         v.frame = CGRectMake(i*size.width, 0, size.width, scrollViewHeight);
